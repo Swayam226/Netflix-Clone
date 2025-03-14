@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "poppins";
 }
 
 body{
@@ -33,12 +34,12 @@ nav{
     max-width: 80vw;
     margin: auto;
     align-items: center;
-    height: 60px;
+    height: 100px;
 }
 
 nav img{
     color: red;
-    width: 114px;
+    width: 130px;
     position: relative;
     z-index: 10;
 }
@@ -49,7 +50,7 @@ nav button{
 }
 
 .hero {
-    height: calc(100% - 62px);
+    height: calc(100% - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,10 +83,12 @@ nav button{
 .sep{
     background-color: rgb(35 32 32);
     height: 7px;
+    position: relative;
+    z-index: 20;
 }
 
 .btn{
-    padding: 5px 8px;
+    padding: 4px 8px;
     /* font-weight: bold; */
     color: white;
     background-color: rgba(252, 252, 252, 0.15);
@@ -93,6 +96,7 @@ nav button{
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
+    margin-right: 8px;
 }
 
 .btn-red{
@@ -121,6 +125,7 @@ nav button{
     border-radius: 2px;
     padding: 5px 12px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .herobuttons{
@@ -137,29 +142,33 @@ nav button{
     max-width: 70vw;
     color: white;
     align-items: center;
+    /* flex-wrap: wrap; */
 }
+
+
 
 .secimg{
     position: relative;
 }
 
 .secimg img{
-    width: 30vw;
+    width: 555px;
     position: relative;
     z-index: 10;
 }
 
 .secimg video{
     position: absolute;
-    top:68px;
-    right: 47px;
-    width: 352px;
+    top:51px;
+    /* right: 47px; */
+    width: 554px;
 }
 
 section.first > div{
     display: flex;
     flex-direction: column;
     font-family: "poppins";
+    padding: 34px 0;
 }
 
 .first > div :first-child{
@@ -210,6 +219,97 @@ section.first > div{
 }
 
 footer{
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+}
+
+
+.footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    padding: 0 0 60px 0;
+}
+
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.questions{
+    padding: 33px 0;
+}
+.footer a{
+    /* text-decoration: none; */
+    color: rgba(255, 255,255,0.5);
+    font-size: 12px;
+    line-height: 21px;
+}
+
+
+@media screen and (max-width:1300px) {
+
+    nav{
+        max-width: 90vw;
+    }
+
+
+    .main input{
+        padding: 7px 13px 8px 14px;
+    }
+    .line1{
+        font-size: 32px;
+        text-align: center;
+    }
+    .line2{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .herobuttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .btn-red{
+        padding: 7.5px;
+        font-size: 13px;
+    }
+
+    .secimg img{
+        width: 305px;
+    }
+
+    .secimg video{
+        width: 305px;
+    }
+
+    .faqbox{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .first > div :first-child{
+        font-size: 32px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    .first > div :nth-child(2){
+        font-size: 18px;
+        font-weight: 400;
+    }
 }
